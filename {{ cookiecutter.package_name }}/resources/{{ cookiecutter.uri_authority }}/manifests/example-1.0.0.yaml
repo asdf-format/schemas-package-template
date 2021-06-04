@@ -1,0 +1,12 @@
+id: asdf://{{ cookiecutter.uri_authority }}/{{ cookiecutter.uri_project }}/manifests/example-1.0.0
+extension_uri: asdf://{{ cookiecutter.uri_authority }}/{{ cookiecutter.uri_project }}/extensions/example-1.0.0
+title: Example extension 1.0.0
+description: |-
+  An example manifest showing how an extension with a single tag is defined.
+tags:
+- tag_uri: asdf://{{ cookiecutter.uri_authority }}/{{ cookiecutter.uri_project }}/tags/example-1.0.0
+  schema_uri: asdf://{{ cookiecutter.uri_authority }}/{{ cookiecutter.uri_project }}/schemas/example-1.0.0
+  title: Example tag
+  description: >-
+    An example tagged object, which is a mapping with a single string
+    key 'foo'.

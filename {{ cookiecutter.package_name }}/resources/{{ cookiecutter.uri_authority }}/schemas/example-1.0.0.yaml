@@ -1,0 +1,17 @@
+%YAML 1.1
+---
+$schema: http://stsci.edu/schemas/yaml-schema/draft-01
+id: asdf://{{ cookiecutter.uri_authority }}/{{ cookiecutter.uri_project }}/schemas/example-1.0.0
+
+title: Schema for example-1.0.0 tagged object
+description: >-
+  An example that demonstrates how a schema is associated
+  with a YAML tag in a manifest.
+
+type: object
+properties:
+  foo:
+    description: An example property named 'foo'
+    type: string
+required: [foo]
+...

@@ -1,0 +1,14 @@
+{
+    "package_name": "asdf-example-schemas",
+    "module_name": "{{ cookiecutter.package_name|lower()|replace('-', '_') }}",
+    "short_description": "{{ cookiecutter.package_name|replace('-', ' ')|replace('_', ' ') }}",
+    "author_name": "Author Name",
+    "author_email": "author@example.com",
+    "github_project": "github-org/{{ cookiecutter.package_name }}",
+    "project_url": "https://github.com/{{ cookiecutter.github_project }}",
+    "uri_authority": "example.com",
+    "uri_project": "example-project",
+    "_copy_without_render": [
+        ".github"
+    ]
+}
