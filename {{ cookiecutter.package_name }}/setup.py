@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+from pathlib import Path
 from setuptools import setup, find_packages
 
 
@@ -13,13 +14,8 @@ package_dir = {
 
 
 def package_yaml_files(directory):
-    paths = []
-    for path, _, filenames in os.walk(directory):
-        for filename in filenames:
-            if filename.endswith(".yaml"):
-                paths.append(os.path.join("..", path, filename))
-    return paths
-
+    paths = sorted(Path(directory).rglob("*.yaml"))
+    return [str(p.relative_to(directory)) for p in paths]
 
 package_data = {
     "{{ cookiecutter.module_name }}.resources": package_yaml_files("resources"),
